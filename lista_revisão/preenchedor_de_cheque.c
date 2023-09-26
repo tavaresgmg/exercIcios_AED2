@@ -4,7 +4,7 @@ void unidade (int inteiro);
 
 int main(){
     int casos; //numero de casos de teste
-    int i, temp, inteiro, decimal, milhoes, resto, centenas;
+    int i, temp, inteiro, decimal, milhoes, resto, centenas, milhares;
     float num;
 
     scanf("%d", &casos);
@@ -21,9 +21,27 @@ int main(){
 
             unidade(milhoes);
 
-        }
-        else if (inteiro > 1000){
+            printf("MILHOES ");
 
+        }
+        if(resto > 1000){
+            milhares = resto / 1000;
+            resto = inteiro % 1000;
+
+            unidade(milhares);
+
+            printf("MIL ");
+        }
+        unidade(resto);
+
+        printf("REAIS ");
+
+        if (decimal > 0){
+            printf("E ");
+
+            unidade(decimal);
+
+            printf("CENTAVOS ");
         }
     }
 
@@ -98,9 +116,9 @@ void unidade (int inteiro){
                     break;
             }
         }
-    }
+    
 
-    if (inteiro < 20){
+    if(inteiro < 20){
         switch (inteiro){
             case 1:
                 printf("UM");
@@ -163,3 +181,4 @@ void unidade (int inteiro){
                 break;
         }
     }
+}

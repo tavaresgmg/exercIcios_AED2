@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/guilhermetavares/Documents/GitHub/exercIcios_AED2/lista_revisão/a.out"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003888, symSize: 0x1B4 }
+  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003888, symSize: 0x1B4 }
+  - { offsetInCU: 0xEE, offset: 0xEE, size: 0x8, addend: 0x0, symName: _unidade, symObjAddr: 0x1B4, symBinAddr: 0x100003A3C, symSize: 0x380 }
+...
