@@ -4,7 +4,7 @@ void unidade (int inteiro);
 
 int main(){
     int casos; //numero de casos de teste
-    int i, temp, inteiro, decimal, milhoes, resto, centenas, milhares;
+    int i, temp, inteiro, decimal, milhoes, resto=0, centenas, milhares;
     float num;
 
     scanf("%d", &casos);
@@ -23,6 +23,8 @@ int main(){
 
             printf("MILHOES ");
 
+        } else {
+            resto = inteiro;
         }
         if(resto > 1000){
             milhares = resto / 1000;
@@ -32,6 +34,7 @@ int main(){
 
             printf("MIL ");
         }
+
         unidade(resto);
 
         printf("REAIS ");
@@ -49,10 +52,12 @@ int main(){
 }
 
 void unidade (int inteiro){
-    int dezena, unidade;
+    int dezena, unidade, centenas;
 
         if(inteiro > 100){
-            switch (inteiro){
+            centenas = inteiro/100;
+            inteiro = inteiro % 100;
+            switch (centenas){
                 case 1:
                     printf("CENTO");
                     break;
@@ -81,13 +86,14 @@ void unidade (int inteiro){
                     printf("NOVECENTOS");
                     break;
             }
+            printf(" ");
         }
 
-        if(inteiro > 20 && inteiro < 100){
+        if(inteiro >= 20 && inteiro < 100){
             dezena = inteiro / 10;
-            unidade = inteiro % 10;
+            inteiro = inteiro % 10;
 
-            switch (inteiro){
+            switch (dezena){
                 case 2:
                     printf("VINTE");
                     break;
@@ -115,9 +121,9 @@ void unidade (int inteiro){
                 default:
                     break;
             }
+            printf(" ");
         }
     
-
     if(inteiro < 20){
         switch (inteiro){
             case 1:
@@ -180,5 +186,6 @@ void unidade (int inteiro){
             default:
                 break;
         }
+        printf(" ");
     }
 }
