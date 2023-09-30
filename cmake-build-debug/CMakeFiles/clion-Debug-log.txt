@@ -1,0 +1,13 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/guilhermetavares/Documents/GitHub/exercIcios_AED2 -B /Users/guilhermetavares/Documents/GitHub/exercIcios_AED2/cmake-build-debug
+-- Configuring done (0.0s)
+CMake Error at CMakeLists.txt:7 (add_executable):
+  Cannot find source file:
+
+    main.c
+
+
+CMake Error at CMakeLists.txt:7 (add_executable):
+  No SOURCES given to target: a.out
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
